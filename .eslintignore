@@ -1,0 +1,4 @@
+*.css
+*.svg
+serviceWorker.ts
+setupTests.ts

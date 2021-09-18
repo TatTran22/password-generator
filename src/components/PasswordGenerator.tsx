@@ -80,8 +80,6 @@ const PasswordGenerator = () => {
     symbols: boolean;
   }
 
-  const [checked, setChecked] = useState<ICheckbox[]>([]);
-
   function ButtonUpDown(prop: { type: string }) {
     let isUp = prop.type === "up" ? true : false;
 
@@ -187,7 +185,7 @@ const PasswordGenerator = () => {
 
   useEffect(() => {
     setPwd(generatePassword(passLen));
-  }, [passLen]);
+  }, [generatePassword, passLen]);
   return (
     <div className="flex flex-col items-center justify-center h-full bg-green-100">
       <h2 className="mt-8 text-5xl font-bold text-center text-green-600">

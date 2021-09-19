@@ -91,13 +91,18 @@ const PasswordGenerator = () => {
 
   useEffect(() => {
     generatePassword(passLen);
-  }, [passLen]);
+  }, [generatePassword, passLen]);
 
   return (
     <div className="flex flex-col items-center justify-center h-full ">
-      <h1 className="mt-8 text-5xl font-bold text-center text-green-600">
-        Generate a Secure Password
-      </h1>
+      <div className="relative flex flex-col items-center justify-center w-full p-4 bg-red-50 rounded-xl md:w-4/6">
+        <h1 className="absolute inline-flex text-5xl font-bold text-center text-red-600 opacity-75 animate-ping-h1">
+          Generate a Secure Password
+        </h1>
+        <h1 className="relative inline-flex text-5xl font-bold text-center text-red-600 ">
+          Generate a Secure Password
+        </h1>
+      </div>
 
       <div className="flex flex-col items-center justify-center w-full p-4 m-4 bg-green-100 rounded-xl md:w-4/6">
         <div className="items-center w-full px-10 py-8 overflow-hidden text-center md:w-3/4 rounded-xl">

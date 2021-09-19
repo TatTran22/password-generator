@@ -29,17 +29,6 @@
     animation: ping 50ms cubic-bezier(0, 0, 0.2, 1) 1;
   }
 
-  .animate-ping-h1 {
-    animation: ping-little 2s cubic-bezier(0, 0, 0.2, 1) infinite;
-  }
-
-  @keyframes ping-little {
-    75%,
-    100% {
-      transform: scale(1.1);
-      opacity: 0;
-    }
-  }
   @keyframes ping {
     75%,
     100% {

@@ -95,10 +95,7 @@ const PasswordGenerator = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-full ">
-      <div className="relative flex flex-col items-center justify-center w-full p-4 bg-red-50 rounded-xl md:w-4/6">
-        <h1 className="absolute inline-flex text-5xl font-bold text-center text-red-600 opacity-75 animate-ping-h1">
-          Generate a Secure Password
-        </h1>
+      <div className="relative flex flex-col items-center justify-center w-full p-4 bg-green-50 rounded-xl md:w-4/6">
         <h1 className="relative inline-flex text-5xl font-bold text-center text-red-600 ">
           Generate a Secure Password
         </h1>

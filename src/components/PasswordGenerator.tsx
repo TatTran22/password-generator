@@ -5,12 +5,11 @@ import ButtonUpDown from './ButtonUpDown';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const PasswordGenerator = () => {
-  const defaultPasswordLength = 12;
   const upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const lowerLetters = 'abcdefghijklmnopqrstuvwxyz';
   const numbers = '0123456789';
   const symbols = '!@#$%^&*()_+=';
-  const [passLen, setPassLen] = useState(defaultPasswordLength);
+  const [passLen, setPassLen] = useState(16);
   const [pwd, setPwd] = useState('');
   const [isUpperLetterChecked, setIsUpperLetterChecked] = useState(true);
   const [isLowerLetterChecked, setIsLowerLetterChecked] = useState(true);
@@ -94,9 +93,9 @@ const PasswordGenerator = () => {
   }, [generatePassword, passLen]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-full ">
-      <div className="relative flex flex-col items-center justify-center w-full p-4 bg-green-50 rounded-xl md:w-4/6">
-        <h1 className="relative inline-flex text-5xl font-bold text-center text-red-600 ">
+    <div className="flex flex-col items-center justify-center h-full bg-gradient-to-b from-red-50 to-red-100">
+      <div className="relative flex flex-col items-center justify-center w-full p-4 bg-teal-100 rounded-xl md:w-4/6">
+        <h1 className="relative inline-flex text-5xl font-bold text-center text-red-500 ">
           Generate a Secure Password
         </h1>
       </div>

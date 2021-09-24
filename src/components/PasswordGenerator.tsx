@@ -70,6 +70,10 @@ const PasswordGenerator = () => {
     generatePassword(passLen);
   };
 
+  const handleCopyButton = () => {
+    navigator.clipboard.writeText(pwd);
+  };
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handlePassLenChange = (event: any) => {
     const regexpNumber = new RegExp('^[0-9]+$');
@@ -105,10 +109,12 @@ const PasswordGenerator = () => {
           <input
             className="w-full text-2xl font-normal text-center border border-green-500 rounded-lg md:w-11/12 focus:outline-none focus:ring-2 focus:ring-green-200"
             value={pwd}
+            readOnly
             type="text"
           />
         </div>
         <div className="flex flex-row justify-around w-full p-4 m-2 overflow-hidden md:w-3/4 rounded-t-xl ">
+          <Button type="clipboard" text="Copy" onClick={handleCopyButton} />
           <Button type="refresh" text="Create" onClick={handlePWGButton} />
         </div>
 
